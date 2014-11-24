@@ -2543,7 +2543,7 @@
                         result = [
                             newline + base + indent,
                             result,
-                            newline + base
+                            // newline + base
                         ];
                     } else {
                         result = [
