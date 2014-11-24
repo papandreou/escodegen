@@ -2542,8 +2542,7 @@
                     if (flags & F_XJS_NOPAREN) {
                         result = [
                             newline + base + indent,
-                            result,
-                            // newline + base
+                            result
                         ];
                     } else {
                         result = [
