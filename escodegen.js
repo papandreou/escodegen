@@ -2501,7 +2501,7 @@
             var i, len;
             withIndent(function(indent) {
                 for (i = 0, len = expr.children.length; i < len; ++i) {
-                    if (expr.children[i].type === Syntax.Literal) {
+                    if (expr.children[i].type === Syntax.Literal || expr.children[i].type === 'JSXText') {
                         fragment = expr.children[i].raw;
                         if (fragment) {
                             jsxFragments.push(fragment);
