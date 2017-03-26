@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
-    esprima = require('esprima'),
+    acorn = require('acorn-jsx'),
     escodegen = require('./loader'),
     chai = require('chai'),
     expect = chai.expect;
@@ -13,14 +13,15 @@ function test(code, expected) {
     StringObject = String;
 
     options = {
-        range: true,
-        loc: false,
-        tokens: true,
-        raw: false,
-        jsx: true
+        ranges: true,
+        locations: false,
+        ecmaVersion: 6,
+        plugins: {
+            jsx: true
+        }
     };
 
-    tree = esprima.parse(code, options);
+    tree = acorn.parse(code, options);
 
     // for UNIX text comment
     actual = escodegen.generate(tree).replace(/[\n\r]$/, '') + '\n';
