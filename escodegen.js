@@ -2481,10 +2481,6 @@
             ];
         },
 
-        JSXText: function (expr, precedence, flags) {
-            return expr.value;
-        },
-
         JSXElement: function (expr, precedence, flags) {
             var result = [], that = this;
 
@@ -2506,7 +2502,7 @@
             withIndent(function(indent) {
                 for (i = 0, len = expr.children.length; i < len; ++i) {
                     if (expr.children[i].type === Syntax.Literal) {
-                        fragment = expr.children[i].raw.trim();
+                        fragment = expr.children[i].raw;
                         if (fragment) {
                             jsxFragments.push(fragment);
                         }
