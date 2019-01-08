@@ -1,5 +1,5 @@
 {
-    "name": "escodegen",
+    "name": "escodegen-papandreou",
     "description": "ECMAScript code generator",
     "homepage": "http://github.com/estools/escodegen",
     "main": "escodegen.js",
@@ -14,7 +14,7 @@
         "escodegen.js",
         "package.json"
     ],
-    "version": "1.11.0",
+    "version": "1.11.0-patch1",
     "engines": {
         "node": ">=4.0"
     },
